@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversion Land Area</title>
+  </head>
+  <body>
+    <h1>Land Area Conversion</h1>
+    <form action="#">
+      <input
+        type="number"
+        id="SquareMeter"
+        placeholder="Enter area in Sqm"
+        size="30"
+      />
+      <select id="units">
+        <option value="0.0001">Hectares</option>
+        <option value="10.7639">Square Foot</option>
+        <option value="1550">Square Inch</option>
+      </select>
+      <button onclick="convertSqm()">Convert</button>
+    </form>
+    <script>
+      function convertSqm() {
+        let Sqm = document.getElementById("SquareMeter").value;
+        let Area = document.getElementById("units").value;
+        let Ans = Number(Sqm) / Number(Area);
+
+        alert(Ans);
+      }
+    </script>
+  </body>
+</html>
